@@ -5,6 +5,6 @@ Aplicacion de tienda online hecha en Blazor WebAssembly (.NET 5) usando tecnlogi
 -WebApi </br>
 -Event Callbacks </br>
 -Dependecy Injection </br>
--Entify framework </br>
+-Entity framework </br>
 -SQLite </br>
 -... </br>

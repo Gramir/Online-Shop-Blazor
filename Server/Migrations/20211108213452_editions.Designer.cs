@@ -3,14 +3,16 @@ using System;
 using Ecommerce.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Ecommerce.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20211108213452_editions")]
+    partial class editions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -71,38 +73,6 @@ namespace Ecommerce.Server.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Editions");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Category #1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Category #2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Category #3"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Category #4"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Category #5"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Category #6"
-                        });
                 });
 
             modelBuilder.Entity("Ecommerce.Shared.Product", b =>
@@ -202,38 +172,6 @@ namespace Ecommerce.Server.Migrations
                     b.HasIndex("ProductsId");
 
                     b.ToTable("EditionProduct");
-
-                    b.HasData(
-                        new
-                        {
-                            EditionsId = 1,
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            EditionsId = 2,
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            EditionsId = 3,
-                            ProductsId = 2
-                        },
-                        new
-                        {
-                            EditionsId = 4,
-                            ProductsId = 3
-                        },
-                        new
-                        {
-                            EditionsId = 5,
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            EditionsId = 6,
-                            ProductsId = 2
-                        });
                 });
 
             modelBuilder.Entity("Ecommerce.Shared.Product", b =>
